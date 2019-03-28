@@ -1,11 +1,9 @@
-// src/controllers/shipping-controller.js
-var productService = require('../services/product-service')
+var productService = require("../services/product-service");
 
 class ShippingController {
-
   constructor() {
-    this.REGULAR_PRICE = 0.1
-    this.OVERNIGHT_PRICE = 1
+    this.REGULAR_PRICE = 0.1;
+    this.OVERNIGHT_PRICE = 1;
   }
 
   async getItemShipping(item) {
@@ -16,7 +14,6 @@ class ShippingController {
       return shippingAmount * this.REGULAR_PRICE
     }
   }
-
 }
 
 module.exports = ShippingController;
